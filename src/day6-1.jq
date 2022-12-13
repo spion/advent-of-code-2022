@@ -1,0 +1,1 @@
+jq -R 'split("") | reduce .[] as $c ([[]]; . + [([$c] + (.|last)) | .[:4]]) | map(unique | length) | index(14)
