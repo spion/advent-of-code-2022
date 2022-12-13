@@ -124,10 +124,6 @@ fn day2() -> Result<()> {
         Move::Scissors => 3,
       };
 
-      // println!(
-      //   "they({:?}) me({:?}) move_score={} game_score={}",
-      //   v[0], v[1], move_score, game_score
-      // );
       return game_score + move_score;
     })
     .sum();
@@ -166,5 +162,9 @@ fn day2_pt2() -> Result<()> {
 }
 
 fn main() -> Result<()> {
-  day2_pt2()
+  if false {
+    day2()
+  } else {
+    day2_pt2()
+  }
 }

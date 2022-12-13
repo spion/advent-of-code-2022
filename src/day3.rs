@@ -53,5 +53,9 @@ fn part2() -> Result<()> {
 }
 
 fn main() -> Result<()> {
-  part2()
+  if false {
+    part1()
+  } else {
+    part2()
+  }
 }

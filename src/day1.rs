@@ -1,25 +1,25 @@
 use anyhow::Result;
 use std::io::stdin;
 
-// fn first() -> Result<()> {
-//   let mut max = 0;
-//   let mut sum = 0;
-//   for maybe_line in stdin().lines() {
-//     let line = maybe_line?;
-//     if line.len() > 0 {
-//       let num: u32 = line.parse()?;
-//       sum += num;
-//     } else {
-//       if sum > max {
-//         max = sum;
-//       }
-//       sum = 0;
-//     }
-//   }
-//   println!("{}", max);
+fn first() -> Result<()> {
+  let mut max = 0;
+  let mut sum = 0;
+  for maybe_line in stdin().lines() {
+    let line = maybe_line?;
+    if line.len() > 0 {
+      let num: u32 = line.parse()?;
+      sum += num;
+    } else {
+      if sum > max {
+        max = sum;
+      }
+      sum = 0;
+    }
+  }
+  println!("{}", max);
 
-//   Ok(())
-// }
+  Ok(())
+}
 
 fn second() -> Result<()> {
   let lines: Vec<String> = stdin().lines().map(|l| l.unwrap()).collect();
@@ -40,5 +40,9 @@ fn second() -> Result<()> {
 }
 
 fn main() -> Result<()> {
-  second()
+  if true {
+    second()
+  } else {
+    first()
+  }
 }
